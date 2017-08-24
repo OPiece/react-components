@@ -1,0 +1,61 @@
+{
+  "name": "react-pure-render-component",
+  "version": "1.0.0",
+  "description": "React pure render component.",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint --max-warnings 10 .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha --recursive",
+    "release": "bash ./cli/release.sh"
+  },
+  "keywords": [
+    "react",
+    "pure-render",
+    "react-component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OPiece/react-pure-render-component.git"
+  },
+  "author": "lianruhe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OPiece/react-pure-render-component/issues"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1"
+  },
+  "peerDependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "chai": "^4.1.1",
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.1.2",
+    "rollup": "^0.47.4",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.1.0",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-postcss": "^0.5.4",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-watch": "^4.3.1",
+    "stylelint-config-standard": "^17.0.0"
+  }
+}

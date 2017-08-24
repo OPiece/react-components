@@ -1,0 +1,17 @@
+.DS_STORE
+.DS_Store
+*.bak
+*.log
+*.out
+
+node_modules
+dist
+
+coverage
+data
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
