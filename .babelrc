@@ -1,3 +1,13 @@
 {
-  "presets": ["es2015-rollup"]
+  "presets": [
+    "es2015",
+    "latest"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "syntax-async-functions",
+    "transform-regenerator",
+    "dynamic-import-webpack"
+  ],
+  "comments": false
 }

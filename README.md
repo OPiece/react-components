@@ -1,10 +1,11 @@
 # react-components
 
-React components base antd
+基于 antd 的 React 组件
 
 ## Scripts
 
 ```
+// 安装依赖
 npm install
 
 // 打包
