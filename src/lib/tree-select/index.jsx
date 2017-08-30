@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Base from 'components/base'
-import list2tree from 'utils/list2tree'
+import list2tree from './list2tree'
 
 import { TreeSelect } from 'antd'
 const TreeNode = TreeSelect.TreeNode
