@@ -32,7 +32,9 @@ export default Form.create({
   @autobind
   handleSubmit (e) {
     e.preventDefault()
-    this.props.form.validateFields((err, values) => {
+
+    const { handleSubmit } = this.props
+    handleSubmit && this.props.form.validateFields((err, values) => {
       if (!err) {
         // console.log('Received values of form: ', values)
         // delete values['__opeation']
@@ -41,7 +43,7 @@ export default Form.create({
             delete values[key]
           }
         })
-        this.props.handleSubmit(values)
+        handleSubmit(values)
       }
     })
   }
