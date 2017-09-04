@@ -10,8 +10,6 @@
 
       & .grid-operation-btn {
         margin-right: 12px;
-        font-size: 14px;
-        height: 32px;
       }
     }
 
@@ -35,6 +33,23 @@
   & .ant-table-wrapper {
     & th, & tr {
       text-align: center;
+    }
+
+    & .ant-table-placeholder {
+      border: 1px solid #e9e9e9
+    }
+  }
+
+  &.little-grid {
+    & .ant-table-thead {
+      & th {
+        padding: 5px;
+      }
+    }
+    & .ant-table-tbody {
+      & td {
+        padding: 5px;
+      }
     }
   }
 

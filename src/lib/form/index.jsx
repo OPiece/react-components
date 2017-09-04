@@ -6,14 +6,13 @@
  * @param {object} props        Form 其它的一些参数
  * @param {object} formData     Form 初始化参数
  */
-import React from 'react'
-// import Base from 'components/base'
+import React, { PureRender } from 'react'
 import PropTypes from 'prop-types'
 
 import FormClass from './form'
 // import './style.css'
 
-export default class RcForm extends React.Component {
+export default class RcForm extends PureRender {
   static propTypes = {
     className: PropTypes.string,
     items: PropTypes.array.isRequired,
