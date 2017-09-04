@@ -8,14 +8,18 @@
 // 安装依赖
 npm install
 
-// 打包
-npm run build
-
 // test
 npm run test
 
 ```
 
+## Usage
+
+```
+import { Form, Grid } from 'opiece-react-component'
+
+```
+
 ## LICENSE
 
-[MIT](https://github.com/OPiece/reactr-components/blob/master/LICENSE)
+[MIT](https://github.com/OPiece/react-components/blob/master/LICENSE)

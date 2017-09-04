@@ -3,7 +3,8 @@
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
-    "standard"
+    "standard",
+    "standard-react"
   ],
   "env": {
     "es6": true,
@@ -38,6 +39,7 @@
     }
   },
   "plugins": [
+    "react",
     "import",
     "standard",
     "babel",
@@ -79,6 +81,9 @@
     "no-unexpected-multiline": 2,
     "no-undef": 2,
     "no-var": 2,
-    "no-warning-comments": 1
+    "no-warning-comments": 1,
+
+    "react/jsx-uses-react": 2,
+    "react/jsx-curly-spacing": 0
   }
 }
