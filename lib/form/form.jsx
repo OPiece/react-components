@@ -11,10 +11,9 @@
 * @param {func} handleSubmit   提交触发的方法
  */
 import React, {
-  Component
+  pureComponent
 } from 'react'
 import PropTypes from 'prop-types'
-import autobind from 'autobind-decorator'
 import mapPropsToFields from './mapPropsToFields'
 
 import { Form } from 'antd'
@@ -22,14 +21,13 @@ const FormItem = Form.Item
 
 export default Form.create({
   mapPropsToFields
-})(class FormClass extends Component {
+})(class FormClass extends pureComponent {
   static propTypes = {
     form: PropTypes.object,
     items: PropTypes.array.isRequired,
     handleSubmit: PropTypes.func
   }
 
-  @autobind
   handleSubmit (e) {
     e.preventDefault()
 
@@ -58,7 +56,7 @@ export default Form.create({
       wrapperCol: { span: 17 }
     }
     return (
-      <Form onSubmit={this.handleSubmit} {...props}>
+      <Form onSubmit={e => this.handleSubmit(e)} {...props}>
         {
           items.map((item, index) =>
             <FormItem key={index} label={item.label} {...formItemLayout} {...item.col}>

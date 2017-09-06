@@ -1,6 +1,6 @@
 {
   "name": "opiece-react-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React components.",
   "main": "index.js",
   "module": "index.js",
@@ -26,7 +26,9 @@
   "bugs": {
     "url": "https://github.com/OPiece/react-components/issues"
   },
-  "peerDependencies": {
+  "dependencies": {
+    "antd": "^2.12.0",
+    "prop-types": "^15.5.8",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   },

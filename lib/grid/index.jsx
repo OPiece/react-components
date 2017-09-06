@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import autobind from 'autobind-decorator'
 import PropTypes from 'prop-types'
 
 import Form from '../form'
@@ -14,7 +13,6 @@ export default class Grid extends PureComponent {
     search: PropTypes.object
   }
 
-  @autobind
   restFields () {
     this.refs.formSearch.formRef.props.form.resetFields()
 
@@ -42,7 +40,7 @@ export default class Grid extends PureComponent {
         },
         element: <div>
           <Button type="primary" htmlType="submit" style={{marginRight: 12}}>搜索</Button>
-          {reset && <Button onClick={this.restFields}>重置</Button>}
+          {reset && <Button onClick={() => this.restFields()}>重置</Button>}
         </div>
       })
     }
