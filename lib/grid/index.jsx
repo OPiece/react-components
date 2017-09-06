@@ -1,12 +1,13 @@
-import React, { PureRender } from 'react'
+import React, { PureComponent } from 'react'
 import autobind from 'autobind-decorator'
 import PropTypes from 'prop-types'
+
+import Form from '../form'
 import { Table, Button } from 'antd'
-import Form from 'components/form'
 
 import './style.css'
 
-export default class Grid extends PureRender {
+export default class Grid extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     operations: PropTypes.array,

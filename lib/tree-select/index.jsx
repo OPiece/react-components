@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import Base from 'components/base'
 import list2tree from './list2tree'
 
 import { TreeSelect } from 'antd'
 const TreeNode = TreeSelect.TreeNode
 
-export default class ListTreeSelect extends Base {
+export default class ListTreeSelect extends PureComponent {
   static propTypes = {
     listData: PropTypes.array,
     objectData: PropTypes.array,
     selfId: PropTypes.string,
-    parendId: PropTypes.string,
+    parentId: PropTypes.string,
     label: PropTypes.string,
     valueKey: PropTypes.string,
     children: PropTypes.string

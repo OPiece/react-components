@@ -1,8 +1,8 @@
 {
-  "name": "react-components",
-  "version": "1.0.0",
+  "name": "opiece-react-components",
+  "version": "0.0.2",
   "description": "React components.",
-  "main": "src/index.js",
+  "main": "index.js",
   "module": "index.js",
   "scripts": {
     "build": "rollup -c",
@@ -12,6 +12,7 @@
     "release": "bash ./cli/release.sh"
   },
   "keywords": [
+    "opiece",
     "react",
     "component",
     "react-components"
@@ -30,6 +31,7 @@
     "react-dom": "^15.3.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-alpha.19",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^7.0.0",
@@ -74,9 +76,5 @@
     "sinon-chai": "^2.13.0",
     "webpack": "^3.5.5",
     "yargs": "^8.0.1"
-  },
-  "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
   }
 }

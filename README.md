@@ -4,20 +4,27 @@
 
 ## Scripts
 
-```
+```js
 // 安装依赖
 npm install
 
 // test
 npm run test
-
 ```
 
 ## Usage
 
-```
-import { Form, Grid } from 'opiece-react-component'
+```js
+// import xyz from opiece-react-components/lib/xyz
 
+// Grid
+import Grid from 'opiece-react-component/lib/grid'
+
+// Form
+import Form from 'opiece-react-component/lib/form'
+
+// TreeSelect
+import TreeSelect from 'opiece-react-component/lib/tree-select'
 ```
 
 ## LICENSE
