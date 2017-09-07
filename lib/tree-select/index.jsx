@@ -9,8 +9,10 @@ export default class ListTreeSelect extends PureComponent {
   static propTypes = {
     listData: PropTypes.array,
     objectData: PropTypes.array,
+
     selfId: PropTypes.string,
     parentId: PropTypes.string,
+
     label: PropTypes.string,
     valueKey: PropTypes.string,
     children: PropTypes.string
