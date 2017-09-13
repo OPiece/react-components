@@ -1,101 +1,87 @@
-const argv = require('yargs').argv
-const webpack = require('webpack')
+import webpack from 'webpack'
+import { argv } from 'yargs'
 
-const TEST_BUNDLER = './tests/test-bundler.js'
+const coverage_enabled = !argv.watch
+
+const coverage_reporters = [
+  { type: 'lcov' }
+]
+
+if (coverage_enabled) {
+  coverage_reporters.push(
+    { type: 'json-summary', file: 'lcov.json' }
+  )
+} else {
+  coverage_reporters.push(
+    { type: 'text-summary' }
+  )
+}
+
+const debug = require('debug')('app:karma')
+debug('Create configuration.')
 
 const karmaConfig = {
-  basePath: '../',
-  browsers: ['PhantomJS'],
-  singleRun: !argv.watch,
-  coverageReporter: {
-    reporters: [
-      { type: 'text-summary' }
-    ]
+  basePath: '../', // project root in relation to bin/karma.js
+  files: [
+    './node_modules/regenerator-runtime/runtime.js',
+    // './node_modules/whatwg-fetch/fetch.js',
+    './node_modules/sinon/pkg/sinon.js',
+    {
+      pattern: './tests/index.js',
+      watched: false,
+      served: true,
+      included: true
+    }
+  ],
+  proxies: {
+    // '/api/': 'http://0.0.0.0:3000/api/'
   },
-  files: [{
-    pattern: TEST_BUNDLER,
-    watched: false,
-    served: true,
-    included: true
-  }],
-  frameworks: ['mocha'],
-  reporters: ['mocha'],
+  singleRun: coverage_enabled,
+  frameworks: ['mocha', 'es6-shim'],
   preprocessors: {
-    [TEST_BUNDLER]: ['webpack']
+    'tests/index.js': ['webpack', 'sourcemap']
   },
-  logLevel: 'WARN',
-  browserConsoleLogOptions: {
-    terminal: true,
-    format: '%b %T: %m',
-    level: ''
+  reporters: ['mocha', 'coverage'],
+  coverageReporter: {
+    reporters: coverage_reporters
   },
+  browsers: ['Chrome'],
   webpack: {
-    entry: TEST_BUNDLER,
-    devtool: 'cheap-module-source-map',
+    devtool: 'inline-source-map',
+    resolve: {
+      modules: ['.', 'node_modules'],
+      extensions: ['.js']
+    },
+    plugins: [
+      new webpack.DefinePlugin({}),
+      new webpack.LoaderOptionsPlugin({
+        debug: true,
+        options: {
+          context: __dirname
+        }
+      })
+    ],
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader',
-          query: {
-            cacheDirectory: true,
-            plugins: [
-              'babel-plugin-transform-class-properties',
-              'babel-plugin-syntax-dynamic-import',
-              [
-                'babel-plugin-transform-runtime',
-                {
-                  helpers: true,
-                  polyfill: false, // we polyfill needed features in src/normalize.js
-                  regenerator: true
-                }
-              ],
-              [
-                'babel-plugin-transform-object-rest-spread',
-                {
-                  useBuiltIns: true // we polyfill Object.assign in src/normalize.js
-                }
-              ]
-            ],
-            presets: [
-              'babel-preset-latest',
-              ['babel-preset-react', { development: true }]
-              // ['babel-preset-env', {
-              //   modules: false,
-              //   targets: {
-              //     ie9: true
-              //   },
-              //   uglify: true
-              // }]
-            ]
-          }
-        },
-        {
-          test: /\.json$/,
-          loader: 'json-loader'
+          test: /\.js$/,
+          // opiece 模块需要 babel 处理
+          exclude: /node_modules[/\\](?!opiece)/,
+          loader: 'babel-loader'
         }
       ]
     },
-    plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': 'test'
-      })
-    ],
-    resolve: {
-      modules: ['.', 'node_modules'],
-      extensions: ['.css', '.js', '.json', '.jsx']
+    node: {
+      fs: 'empty',
+      net: 'empty'
     },
-    externals: {
-      'react/addons': 'react',
-      'react/lib/ExecutionEnvironment': 'react',
-      'react/lib/ReactContext': 'react'
+    performance: {
+      hints: false
     }
   },
   webpackMiddleware: {
-    stats: 'errors-only',
     noInfo: true
   }
 }
 
-module.exports = (cfg) => cfg.set(karmaConfig)
+export default cfg => cfg.set(karmaConfig)

@@ -1,6 +1,5 @@
-import { expect } from 'chai'
-describe('A suite of basic functions', () => {
+describe('test functions', () => {
   it('reverse word', () => {
-    expect('DCBA').equal('ABCD'.split('').reverse().join(''))
+    expect('ABCD'.split('').reverse().join('')).to.equal('DCBA')
   })
 })
