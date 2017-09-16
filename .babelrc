@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "es2015",
+    "stage-2",
+    ["env", {
+      "modules": false,
+      "targets": {
+        "ie9": true,
+      },
+      "uglify": true,
+    }],
+    "react"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "syntax-dynamic-import",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-runtime"
+   ],
+   "comments": false
+}
