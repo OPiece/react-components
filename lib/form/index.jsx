@@ -27,7 +27,7 @@ export default class RcForm extends PureComponent {
 
     return (
       <div className={cls}>
-        <FormClass wrappedComponentRef={inst => { this.formRef = inst }} items={items} handleSubmit={handleSubmit} {...props} />
+        <FormClass items={items} handleSubmit={handleSubmit} {...props} />
       </div>
     )
   }

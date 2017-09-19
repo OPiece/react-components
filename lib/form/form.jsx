@@ -49,6 +49,8 @@ export default Form.create({
   render () {
     const { form, items, handleSubmit, ...props } = this.props
     delete props.formData
+    delete props.wrappedComponentRef
+
     const { getFieldDecorator } = form
 
     const formItemLayout = props.layout === 'vertical' ? null : {
