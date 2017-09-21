@@ -11,7 +11,7 @@
 * @param {func} handleSubmit   提交触发的方法
  */
 import React, {
-  pureComponent
+  PureComponent
 } from 'react'
 import PropTypes from 'prop-types'
 import mapPropsToFields from './mapPropsToFields'
@@ -21,7 +21,7 @@ const FormItem = Form.Item
 
 export default Form.create({
   mapPropsToFields
-})(class FormClass extends pureComponent {
+})(class FormClass extends PureComponent {
   static propTypes = {
     form: PropTypes.object,
     items: PropTypes.array.isRequired,

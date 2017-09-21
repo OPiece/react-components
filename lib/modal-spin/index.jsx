@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import { Modal, Spin } from 'antd'
+
 import './style.css'
 
 export default class ModalSpin extends PureComponent {
