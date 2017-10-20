@@ -28,7 +28,7 @@
     "url": "https://github.com/OPiece/react-components/issues"
   },
   "peerDependencies": {
-    "antd": "^2.12.0",
+    "antd": "^2.13.4",
     "prop-types": "^15.5.8",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
