@@ -1,6 +1,6 @@
 {
   "name": "opiece-react-components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React components.",
   "main": "index.js",
   "module": "index.js",
@@ -26,6 +26,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/OPiece/react-components/issues"
+  },
+  "dependencies": {
+    "opiece-utils": "0.0.4"
   },
   "peerDependencies": {
     "antd": "^2.13.4",

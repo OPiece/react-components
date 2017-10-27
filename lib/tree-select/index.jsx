@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import list2tree from './list2tree'
+import list2tree from 'opiece-utils/lib/list2tree'
 
 import { TreeSelect } from 'antd'
-import 'antd/lib/tree-select/style/index.less'
 
 const TreeNode = TreeSelect.TreeNode
 

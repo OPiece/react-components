@@ -11,8 +11,6 @@ import PropTypes from 'prop-types'
 
 import FormClass from './form'
 
-import 'antd/lib/form/style/index.less'
-
 export default class RcForm extends PureComponent {
   static propTypes = {
     className: PropTypes.string,

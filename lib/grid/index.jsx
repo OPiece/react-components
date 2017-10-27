@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Form from '../form'
 import { Table, Button } from 'antd'
 
-import 'antd/lib/table/style/index.less'
 import './style.css'
 
 export default class Grid extends PureComponent {
