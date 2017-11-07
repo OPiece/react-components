@@ -28,7 +28,7 @@
     "url": "https://github.com/OPiece/react-components/issues"
   },
   "dependencies": {
-    "opiece-utils": "0.0.4"
+    "opiece-utils": "0.0.5"
   },
   "peerDependencies": {
     "antd": "^2.13.4",
