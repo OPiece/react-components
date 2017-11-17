@@ -14,7 +14,7 @@ export default class Grid extends PureComponent {
   }
 
   restFields () {
-    this.refs.formSearch.formRef.props.form.resetFields()
+    this.formSearch.props.form.resetFields()
 
     const { search } = this.props
     const { reset } = search || {}
@@ -66,7 +66,7 @@ export default class Grid extends PureComponent {
           {
             // 搜索框
             search && <Form
-              ref="formSearch"
+              wrappedComponentRef={inst => { this.formSearch = inst }}
               className="grid-search"
               layout="inline"
               items={items}
