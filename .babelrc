@@ -14,7 +14,14 @@
     "syntax-dynamic-import",
     "transform-class-properties",
     "transform-object-rest-spread",
-    "transform-runtime"
+    "transform-runtime",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
    ],
    "comments": false
 }
