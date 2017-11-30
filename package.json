@@ -28,7 +28,7 @@
     "url": "https://github.com/OPiece/react-components/issues"
   },
   "dependencies": {
-    "opiece-utils": "0.0.5"
+    "opiece-utils": "0.0.6"
   },
   "peerDependencies": {
     "antd": "^2.13.4",
@@ -37,7 +37,7 @@
     "react-dom": "^15.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.0.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-import": "^1.6.2",
@@ -70,10 +70,10 @@
     "karma-mocha-reporter": "^2.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.4",
-    "mocha": "^3.5.0",
-    "sinon": "^3.2.1",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.2",
     "sinon-chai": "^2.13.0",
     "webpack": "^3.5.5",
-    "yargs": "^8.0.1"
+    "yargs": "^10.0.3"
   }
 }
