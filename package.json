@@ -1,6 +1,6 @@
 {
   "name": "opiece-react-components",
-  "version": "0.0.9",
+  "version": "0.0.12",
   "description": "React components.",
   "main": "index.js",
   "module": "index.js",
@@ -28,13 +28,13 @@
     "url": "https://github.com/OPiece/react-components/issues"
   },
   "dependencies": {
-    "opiece-utils": "0.0.6"
+    "opiece-utils": "0.0.7"
   },
   "peerDependencies": {
-    "antd": "^2.13.4",
+    "antd": "^3.0.3",
     "prop-types": "^15.5.8",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
@@ -62,7 +62,7 @@
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
-    "karma": "^1.7.0",
+    "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-es6-shim": "^1.0.0",
