@@ -1,15 +1,13 @@
 # react-components
 
-基于 antd 的 React 组件
+> 基于 antd 的 React 组件
 
-## Scripts
+## Install
 
-```js
-// 安装依赖
-npm install
+```bash
 
-// test
-npm run test
+npm install opiece-react-components --save
+
 ```
 
 ## Usage
